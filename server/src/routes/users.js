@@ -65,5 +65,3 @@ router.post("/login", async (req, res) => {
 })
 
 export {router as UserRouter}
-
-// export const verifyToken = {}
