@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: black;
+  color: #f1eef1;
+}
+
+input {
+  color: black;
+}
+
+.login-bg {
+  background: url("../assets/authbg_dark.svg") no-repeat center center fixed;
+}
+
+.disable-scroll {
+  overflow: hidden;
+}
+
+.sidebar {
+  position: absolute;
+  left: -225px;
+  height: 100vh;
+  width: 200px;
+  transition: left 0.3s ease-in-out;
+  background: #0F0E0F;
+}
+.sidebar.open {
+  left: 0;
+}
+.content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  transition: left 0.3s ease-in-out;
+  padding: 16px;
+}
+.content.open {
+  left: 200px;
+}
+@media only screen and (max-width: 768px) {
+  .sidebar{
+    z-index: 3;
+  }
+  .content.open {
+    left: 0;
+  }
+}
