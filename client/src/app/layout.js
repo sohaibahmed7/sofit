@@ -9,8 +9,8 @@ const inter = Rubik({ subsets: ['latin'], weight: '400' })
 
 
 export const metadata = {
-  title: 'Sohaib Fitness',
-  description: 'MERN Fitness and Workout Application',
+  title: 'Sofit',
+  description: `Your workouts, that's all you need.`,
 }
 
 export default function RootLayout({ children }) {
