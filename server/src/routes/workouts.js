@@ -4,7 +4,7 @@ import { UserModel } from "../models/Users.js"
 
 const router = express.Router()
 
-router.post("/", async (req, res) => {
+router.post("/create", async (req, res) => {
     const workout = new WorkoutModel(req.body)
 
     try {
@@ -15,7 +15,7 @@ router.post("/", async (req, res) => {
     }
 })
 
-router.put("/", async (req, res) => {
+router.put("/create", async (req, res) => {
     try {
         const workout = await WorkoutModel.findById(req.body.workoutID)
         const user = await UserModel.findById(req.body.userID)

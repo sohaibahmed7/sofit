@@ -96,7 +96,7 @@ export const Create = () => {
 
     const saveWorkout = async (workoutID) => {
         try {
-            await axios.put("https://api.sofit.djerty.com/dashboard", {workoutID, userID})
+            await axios.put("https://api.sofit.djerty.com/dashboard/create", {workoutID, userID})
         } catch (err) {
             alert(err)
         }
@@ -123,7 +123,7 @@ export const Create = () => {
             })) {
                 setErrorMessage("Please fill the entire exercise.")
           } else {
-            const response = await axios.post("https://api.sofit.djerty.com/dashboard", workout)
+            const response = await axios.post("https://api.sofit.djerty.com/dashboard/create", workout)
             saveWorkout(response.data._id)
             setErrorMessage(null)
             window.location.assign(`/dashboard/workout/${response.data._id}`)
