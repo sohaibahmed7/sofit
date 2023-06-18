@@ -17,7 +17,7 @@ const Login = () => {
   const onSubmit = async (event) => {
     event.preventDefault()
     try {
-      const res = await axios.post(`https://api.sofit.djerty.com/login`, {
+      const res = await axios.post(`http://api.sofit.djerty.com/login`, {
         username,
         password
       })
