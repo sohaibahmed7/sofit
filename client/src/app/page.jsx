@@ -17,7 +17,7 @@ const Login = () => {
   const onSubmit = async (event) => {
     event.preventDefault()
     try {
-      const res = await axios.post(`http://localhost:3001/login`, {
+      const res = await axios.post(`http://api.sofit.djerty.com:3001/login`, {
         username,
         password
       })
@@ -32,6 +32,7 @@ const Login = () => {
       }
     } catch (err) {
       alert(err)
+      console.log(err)
     }
   }
 
