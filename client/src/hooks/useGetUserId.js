@@ -1,3 +1,5 @@
+import localStorage from 'local-storage'
+
 export const useGetUserId = () => {
-    return window.localStorage.getItem("userID")
-}
+  return localStorage.get('userID');
+};
