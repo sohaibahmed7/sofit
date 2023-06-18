@@ -28,7 +28,7 @@ const Dashboard = () => {
 
     const fetchUserData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/dashboard/userData/${userID}`)
+        const response = await axios.get(`https://api.sofit.djerty.com/dashboard/userData/${userID}`)
         setUserData({
           displayName: response.data.user.displayName,
           weight: response.data.user.weight,

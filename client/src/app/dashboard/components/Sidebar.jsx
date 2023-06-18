@@ -30,7 +30,7 @@ const Sidebar = (props) => {
   useEffect(() => {
     const fetchWorkouts = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/dashboard/${userID}`)
+        const response = await axios.get(`https://api.sofit.djerty.com/dashboard/${userID}`)
         setSavedWorkouts(response.data.workouts)
       } catch (err) {
         console.log(err)

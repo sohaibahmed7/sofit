@@ -33,7 +33,7 @@ const Workout = (props) => {
   useEffect(() => {
     const fetchWorkout = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/dashboard/workout/${workoutID}`)
+        const response = await axios.get(`https://api.sofit.djerty.com/dashboard/workout/${workoutID}`)
         setSavedWorkout(response.data.workout)
       } catch (err) {
         alert(err)
