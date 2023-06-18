@@ -14,7 +14,7 @@ const Register = () => {
     const onSubmit = async (event) => {
       event.preventDefault()
       try {
-        const res = await axios.post(`http://localhost:3001/register`, {
+        const res = await axios.post(`https://api.sofit.djerty.com/register`, {
           username, 
           password,
           displayName,
