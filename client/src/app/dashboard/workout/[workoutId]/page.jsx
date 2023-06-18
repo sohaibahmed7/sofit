@@ -45,7 +45,7 @@ const Workout = (props) => {
 
   const handleDeleteWorkout = async (workoutID) => {
     try {
-      await axios.delete(`http://localhost:3001/dashboard/workout/${workoutID}`)
+      await axios.delete(`https://api.sofit.djerty.com/dashboard/workout/${workoutID}`)
       window.location.assign(`/dashboard`)
     } catch (err) {
       alert(err)
