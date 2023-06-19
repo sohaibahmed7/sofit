@@ -6,7 +6,6 @@ const router = express.Router()
 
 router.post("/create", async (req, res) => {
     const workout = new WorkoutModel(req.body)
-
     try {
         const response = await workout.save()
         res.json(response)
@@ -16,10 +15,12 @@ router.post("/create", async (req, res) => {
 })
 
 router.put("/create", async (req, res) => {
+    const { workoutID, userID } = req.body
+
     try {
-        const workout = await WorkoutModel.findById(req.body.workoutID)
-        const user = await UserModel.findById(req.body.userID)
-        user.workouts.push(workout)
+        await WorkoutModel.findById(workoutID)
+        const user = await UserModel.findById(userID)
+        user.workouts.push(workoutID)
         await user.save()
         res.json( {workouts: user.workouts} )
     } catch (err) {
