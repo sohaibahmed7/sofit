@@ -51,11 +51,14 @@ const Timer = () => {
     const secFormat = seconds < 10 ? `0${seconds}`: seconds
 
     return (
+        <>
         <div>
             <h4 className="text-3xl font-medium text-center mb-4">⏲️ Timer</h4>
             {/* Displaying the formatted timer */}
             <h1 className="text-8xl text-center">{minFormat}:{secFormat}</h1>
-            <div className="text-lg mt-6 flex justify-between px-4">
+        </div>
+        <div>
+            <div className="text-lg mt-6 flex justify-between gap-14 px-4">
                 {/* buttons that increase/decrease the time */}
                 <button onClick={decreaseCountdown} className="bg-[#6247AA] px-2 py-1 rounded-md">-30 sec</button>
                 <button onClick={increaseCountdown} className="bg-[#6247AA] px-2 py-1 rounded-md">+30 sec</button>
@@ -66,6 +69,8 @@ const Timer = () => {
                 <button onClick={() => setStart(prevStart => !prevStart)} className="bg-red-500 px-2 py-1 rounded-md">{!start ? "Start" : "Pause"}</button>
             </div>
         </div>
+        </>
+
     )
 }
 
